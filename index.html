@@ -33,6 +33,7 @@
     box-shadow:0 10px 40px rgba(0,0,0,.5);
     display:block;
   }
+  .page img{width:100%;height:auto;display:block}
 </style>
 </head>
 <body>
@@ -42,6 +43,8 @@
       Télécharger le PDF
     </a>
   </div>
-  <img class="page" src="page-1.png" alt="CV de Deniz Ozbakir">
+  <object class="page" type="image/svg+xml" data="cv.svg" aria-label="CV de Deniz Ozbakir">
+    <img src="page-1.png" alt="CV de Deniz Ozbakir">
+  </object>
 </body>
 </html>

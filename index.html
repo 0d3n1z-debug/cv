@@ -30,13 +30,24 @@
   }
   .btn:hover{background:#3a5ab0}
   .btn svg{width:1.2em;height:1.2em}
-  .page{
+  .page-wrap{
+    position:relative;
     width:100%;max-width:900px;
     background:#fff;
     box-shadow:0 10px 40px rgba(0,0,0,.5);
-    display:block;
+    line-height:0;
   }
+  .page{width:100%;display:block;pointer-events:none}
   .page img{width:100%;height:auto;display:block}
+  /* zones cliquables superposees (tel / mail) */
+  .hot{
+    position:absolute;display:block;
+    border-radius:6px;
+    transition:background .15s;
+  }
+  .hot:hover{background:rgba(66,103,201,.18)}
+  .hot-tel{top:9.8%;left:38%;width:20%;height:3.2%}
+  .hot-mail{top:12.8%;left:38%;width:26%;height:3.2%}
 </style>
 </head>
 <body>
@@ -46,8 +57,12 @@
       Télécharger le PDF
     </a>
   </div>
-  <object class="page" type="image/svg+xml" data="cv.svg" aria-label="CV de Deniz Ozbakir">
-    <img src="page-1.png" alt="CV de Deniz Ozbakir">
-  </object>
+  <div class="page-wrap">
+    <object class="page" type="image/svg+xml" data="cv.svg" aria-label="CV de Deniz Ozbakir">
+      <img src="page-1.png" alt="CV de Deniz Ozbakir">
+    </object>
+    <a class="hot hot-tel" href="tel:+33636142455" title="Appeler" aria-label="Appeler +33 6 36 14 24 55"></a>
+    <a class="hot hot-mail" href="mailto:denizozbakir0@gmail.com" title="Envoyer un e-mail" aria-label="E-mail denizozbakir0@gmail.com"></a>
+  </div>
 </body>
 </html>

@@ -6,224 +6,42 @@
 <title>Deniz Ozbakir — CV</title>
 <meta name="description" content="CV de Deniz Ozbakir — Génie Civil et Urbanisme, INSA Lyon.">
 <style>
-  :root{
-    --blue:#4267c9;
-    --blue-dark:#3a5ab0;
-    --ink:#2c2c2c;
-    --muted:#666;
-    --line:#e3e3e3;
-    --sidebar-ink:#eef2ff;
-    --bg:#f4f5f7;
-    --card:#ffffff;
-  }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
   body{
+    background:#525659;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:24px 12px 60px;
     font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;
-    background:var(--bg);
-    color:var(--ink);
-    line-height:1.55;
-    padding:24px 12px;
   }
-  .cv{
-    max-width:960px;
-    margin:0 auto;
-    background:var(--card);
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 10px 40px rgba(0,0,0,.12);
-    display:grid;
-    grid-template-columns:300px 1fr;
+  .bar{
+    width:100%;max-width:900px;margin-bottom:16px;
+    display:flex;justify-content:flex-end;
   }
-  /* ---- Sidebar ---- */
-  .side{
-    background:var(--blue);
-    color:var(--sidebar-ink);
-    padding:36px 26px;
-  }
-  .photo{
-    width:150px;height:150px;border-radius:50%;
-    margin:0 auto 28px;
-    background:#dfe6f7 center/cover no-repeat;
-    border:5px solid rgba(255,255,255,.6);
-    display:flex;align-items:center;justify-content:center;
-    font-size:44px;font-weight:700;color:var(--blue);
-  }
-  /* si tu ajoutes photo.jpg, elle s'affiche automatiquement */
-  .photo.has-img{color:transparent}
-  .side h2{
-    font-size:20px;font-weight:600;letter-spacing:.5px;
-    margin:26px 0 12px;color:#fff;
-  }
-  .side h2:first-of-type{margin-top:0}
-  .side ul{list-style:none}
-  .side li{margin-bottom:10px;font-size:14px}
-  .side li b{color:#fff}
-  .lang-tag{
-    display:inline-block;background:rgba(255,255,255,.15);
-    padding:2px 10px;border-radius:20px;font-size:13px;margin:3px 4px 3px 0;
-  }
-  /* ---- Main ---- */
-  .main{padding:40px 42px}
-  .name{font-size:38px;font-weight:300;color:var(--ink);line-height:1.1}
-  .name b{font-weight:700;color:var(--blue)}
-  .tagline{color:var(--muted);margin:6px 0 22px;font-size:16px}
-  .contact{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
-  .contact a,.contact span{color:var(--ink);text-decoration:none;font-size:14.5px;display:flex;align-items:center;gap:10px}
-  .contact a:hover{color:var(--blue)}
-  .contact svg{flex:0 0 18px;stroke:var(--blue)}
-  section{margin-top:30px}
-  .main h3{
-    font-size:22px;font-weight:300;color:var(--ink);
-    border-bottom:2px solid var(--line);padding-bottom:6px;margin-bottom:16px;
-  }
-  .main h3 b{font-weight:600;color:var(--blue)}
-  .item{margin-bottom:16px;position:relative;padding-left:20px}
-  .item::before{
-    content:"";position:absolute;left:0;top:7px;
-    width:9px;height:9px;border-radius:50%;background:var(--blue);
-  }
-  .item .row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-  .item .title{font-weight:700;font-size:15px}
-  .item .date{color:var(--muted);font-size:13px;white-space:nowrap}
-  .item p{font-size:14px;color:#444;margin-top:2px}
-  /* ---- Responsive ---- */
-  @media(max-width:760px){
-    .cv{grid-template-columns:1fr}
-    .main{padding:30px 24px}
-    .name{font-size:30px}
-  }
-  /* ---- Print ---- */
-  @media print{
-    body{background:#fff;padding:0}
-    .cv{box-shadow:none;border-radius:0;max-width:100%}
-    .no-print{display:none}
-  }
-  .actions{max-width:960px;margin:0 auto 16px;text-align:right}
   .btn{
-    background:var(--blue);color:#fff;border:none;cursor:pointer;
-    padding:9px 18px;border-radius:8px;font-size:14px;font-weight:600;
+    display:inline-flex;align-items:center;gap:8px;
+    background:#4267c9;color:#fff;text-decoration:none;
+    padding:11px 20px;border-radius:8px;font-size:15px;font-weight:600;
+    box-shadow:0 2px 8px rgba(0,0,0,.3);
   }
-  .btn:hover{background:var(--blue-dark)}
+  .btn:hover{background:#3a5ab0}
+  .page{
+    width:100%;max-width:900px;
+    background:#fff;
+    box-shadow:0 10px 40px rgba(0,0,0,.5);
+    display:block;
+  }
 </style>
 </head>
 <body>
-
-<div class="actions no-print">
-  <button class="btn" onclick="window.print()">🖨️ Imprimer / PDF</button>
-</div>
-
-<div class="cv">
-  <!-- SIDEBAR -->
-  <aside class="side">
-    <div class="photo" id="photo">DO</div>
-
-    <h2>Contact</h2>
-    <ul>
-      <li>📞 +33 6 36 14 24 55</li>
-      <li>✉️ denizozbakir0@gmail.com</li>
-      <li>📍 60 Rue Claude Genin, 38100 Grenoble</li>
-    </ul>
-
-    <h2>Compétences</h2>
-    <ul>
-      <li><b>CAO :</b> SolidWorks, SolidEdge, Fusion 360, AutoCAD</li>
-      <li><b>Programmation :</b> Python, MATLAB, JavaScript, HTML</li>
-      <li><b>Génie Civil :</b> Thermique, Conditionnement d'air, Acoustique du bâtiment, Dimensionnement BA, étude de structures (SCIA Engineer)</li>
-    </ul>
-
-    <h2>Langues</h2>
-    <div>
-      <span class="lang-tag">Anglais — B2</span>
-      <span class="lang-tag">Turc — Courant</span>
-      <span class="lang-tag">Français</span>
-    </div>
-
-    <h2>Centres d'intérêt</h2>
-    <ul>
-      <li>🥾 Trail, Trekking</li>
-      <li>🚴 Cyclisme</li>
-      <li>🥊 Boxe</li>
-      <li>🚗 Automobile</li>
-    </ul>
-  </aside>
-
-  <!-- MAIN -->
-  <main class="main">
-    <h1 class="name">Deniz <b>OZBAKIR</b></h1>
-    <p class="tagline">Recherche d'une première expérience dans le génie civil</p>
-
-    <div class="contact">
-      <a href="tel:+33636142455">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        +33 6 36 14 24 55
-      </a>
-      <a href="mailto:denizozbakir0@gmail.com">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-        denizozbakir0@gmail.com
-      </a>
-      <span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        60 Rue Claude Genin, 38100 Grenoble
-      </span>
-    </div>
-
-    <section>
-      <h3>À <b>propos</b></h3>
-      <p>Je recherche une première expérience professionnelle dans le génie civil et la construction. Sérieux, polyvalent et motivé, je suis ouvert à toute proposition permettant une période d'observation/formation afin de développer mes compétences et acquérir une première expérience concrète dans le domaine.</p>
-    </section>
-
-    <section>
-      <h3>Études <b>& formations</b></h3>
-
-      <div class="item">
-        <div class="row"><span class="title">Lycée Pierre Termier</span><span class="date">2019 — 2022</span></div>
-        <p>Bac technologique STI2D</p>
-      </div>
-
-      <div class="item">
-        <div class="row"><span class="title">INSA Lyon</span><span class="date">2022 — 2024</span></div>
-        <p>Classe préparatoire intégrée, Formation Initiale aux Métiers d'Ingénieur</p>
-      </div>
-
-      <div class="item">
-        <div class="row"><span class="title">Stage — GreenAlp, Grenoble</span><span class="date">2023</span></div>
-        <p>Mise en qualité des données graphiques et attributaires du Système d'Information Géographique</p>
-      </div>
-
-      <div class="item">
-        <div class="row"><span class="title">INSA Lyon</span><span class="date">2024 — 2026</span></div>
-        <p>Département Génie Civil et Urbanisme — Bac+4</p>
-      </div>
-    </section>
-
-    <section>
-      <h3><b>Projets</b></h3>
-
-      <div class="item">
-        <div class="row"><span class="title">Transcription de documents papier en braille</span><span class="date">2024</span></div>
-        <p>Développement d'un programme prototype de reconnaissance et de conversion en braille, facilitant l'accès pour les utilisateurs malvoyants ou non-voyants (soutenu par l'UNADEV).</p>
-      </div>
-
-      <div class="item">
-        <div class="row"><span class="title">Application de génération de documents</span><span class="date">2026</span></div>
-        <p>Développement d'une application mobile Android visant à automatiser la génération de factures et devis, directement depuis un smartphone, sans outil bureautique.</p>
-      </div>
-    </section>
-  </main>
-</div>
-
-<script>
-  // Affiche photo.jpg si présent à côté du fichier
-  (function(){
-    var img=new Image();
-    img.onload=function(){
-      var p=document.getElementById('photo');
-      p.style.backgroundImage="url('photo.jpg')";
-      p.classList.add('has-img');
-    };
-    img.src='photo.jpg';
-  })();
-</script>
+  <div class="bar">
+    <a class="btn" href="cv.pdf" download="CV_Deniz_Ozbakir.pdf">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+      Télécharger le PDF
+    </a>
+  </div>
+  <img class="page" src="page-1.png" alt="CV de Deniz Ozbakir">
 </body>
 </html>

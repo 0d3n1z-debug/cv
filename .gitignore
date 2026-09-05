@@ -2,3 +2,5 @@
 Lettre_Motivation_*
 lettre_bot.py
 __pycache__/
+*.backup.pdf
+mail.txt
